@@ -1,0 +1,56 @@
+.page{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: system-ui;
+  margin: 0 auto;
+  width: 100%;
+  background-color: #222034;
+  color: beige;
+}
+
+main{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+form{
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin: 16px;
+}
+
+.container-movies {
+  margin: 0 auto;
+  padding: 0;
+  display: grid;
+  width: 100%;
+  max-width: 800px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 24px;
+
+}
+
+.box-movie{
+  text-align: center;
+}
+
+.box-movie img{
+  border-radius: 8px;
+  width: 80%;
+}
+
+h3{
+  margin:0
+}
+p{
+  margin: 0;
+}
+
+select {
+  min-width: unset;
+  margin-top: 16px;
+}
