@@ -84,7 +84,6 @@ const sortedUsers = (filteredUsers:User[])=>{
 //   return [...filteredUsers].sort((a, b) => a.location.country.localeCompare(b.location.country));
 // }, [filteredUsers]);
 
-console.log('ejecución')
 
 
   return (
