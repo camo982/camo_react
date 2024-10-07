@@ -12,33 +12,23 @@ function App() {
   //const [sortByCountry, setSortByCountry] = useState(false)
   const [filterCountry,setFilterCountry] = useState('')
   const [sortBy, setSortBy] = useState<SortBy> (SortBy.NONE)
-  const [isLoading, setIsloading] = useState(false)
-  const [error,setError] = useState(false)
-  const [page,setPage]= useState(1)
 
   useEffect(()=>{
-    setIsloading(true)
-    setError(false)
-    fetch(`https://randomuser.me/api/?results=10&seed=Camo&page=${page}`)
+    fetch('https://randomuser.me/api/?results=100')
       .then((res)=>{
         if (!res.ok){
-          setError(true)
           throw new Error('Error llamando usuarios');
         }
         return res.json();
       }).then((res)=>{
-        setUsers(prevUser=>prevUser.concat(res.results))
+        setUsers(res.results)
         initialUsers.current=res.results
         
       })
       .catch(err =>{
-        setError(true)
         console.error(err)
       })
-      .finally(()=>{
-        setIsloading(false)
-      })
-  },[page])
+  },[])
 
 const toggleColor= ()=>{
   setColorRows(!colorRows)
@@ -50,7 +40,6 @@ const toggleOrderByCountry = () =>{
 }
 
 const resetUsersList = () => {
-  setPage(1)
   setUsers(initialUsers.current)
 }
 
@@ -79,7 +68,6 @@ const sortedUsers = (filteredUsers:User[])=>{
     case SortBy.NONE: 
       return filteredUsers
     case SortBy.COUNTRY:
-      console.log('sourtedByCountry')
       return [...filteredUsers].sort((a,b) => a.location.country.localeCompare(b.location.country))
     case SortBy.FIRST:
       return [...filteredUsers].sort((a,b) => a.name.first.localeCompare(b.name.first))
@@ -101,29 +89,19 @@ const sortedUsers = (filteredUsers:User[])=>{
   return (
     <div>
       <header style={{marginBottom:'48px'}}>
-        <h1>Prueba técnica 55K</h1>
-        <button onClick={()=>toggleColor()}>
-          Colorear Filas
-        </button>
-        <button onClick={()=>toggleOrderByCountry()}>
-          {(sortBy !== SortBy.COUNTRY)?'Ordenar por país':'No ordenar por país'}
-        </button>
-        <button onClick={()=>resetUsersList()}>
-          Restaurar estado inicial
-        </button>
-        <input placeholder='Filtrar por País' onChange={handleCountryEntry}></input>
+      <h1>Prueba técnica 55K</h1>
+      <button onClick={()=>toggleColor()}>
+        Colorear Filas
+      </button>
+      <button onClick={()=>toggleOrderByCountry()}>
+        {(sortBy !== SortBy.COUNTRY)?'Ordenar por país':'No ordenar por país'}
+      </button>
+      <button onClick={()=>resetUsersList()}>
+        Restaurar estado inicial
+      </button>
+      <input placeholder='Filtrar por País' onChange={handleCountryEntry}></input>
       </header>
-      <main>
-        {users.length >0 &&
-          <UsersList users={sortedUsers(filteredUsers)} colorRows = {colorRows} handleDeleteUser={handleDeleteUser} changeSort= {hangleChangeSort}/>
-        }
-        {isLoading && <p>Cargando...</p>}
-        {!isLoading && error && <p>Ha habido un error</p>}
-        {!isLoading && !error && users.length === 0 && <p>No hay usuarios</p>}
-        <button onClick={()=>setPage(prevPage => prevPage+1)}>
-          Cargar más elementos
-        </button>
-      </main>
+      <UsersList users={sortedUsers(filteredUsers)} colorRows = {colorRows} handleDeleteUser={handleDeleteUser} changeSort= {hangleChangeSort}/>
     </div>
   )
 }
