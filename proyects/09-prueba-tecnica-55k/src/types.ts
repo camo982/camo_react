@@ -89,7 +89,7 @@ export interface Root {
   
   export enum SortBy {
     NONE = 'none',
-    NAME = 'name',
+    FIRST = 'first',
     LAST = 'last',
     COUNTRY = 'country',
   }

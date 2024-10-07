@@ -1,27 +1,26 @@
-import { type User } from "../types"
+import { SortBy, type User } from "../types"
 
 interface Props {
     users: User[],
     colorRows: boolean,
-    handleDeleteUser: (userUuid:string) => void
+    handleDeleteUser: (userUuid:string) => void,
+    changeSort: (sortBy:SortBy) => void
 }
 
-export function UsersList ({users,colorRows,handleDeleteUser}:Props) {
+export function UsersList ({users,colorRows,handleDeleteUser,changeSort}:Props) {
 
     const isOdd=(number:number)=>{
         return number % 2 !== 0
     }
-
-
 
     return(
         <table style={{width:'100%'}}>
             <thead>
                 <tr>
                     <th>Foto</th>
-                    <th>Nombre</th>
-                    <th>Apellido</th>
-                    <th>País</th>
+                    <th onClick={()=>changeSort(SortBy.FIRST)}>Nombre</th>
+                    <th onClick={()=>changeSort(SortBy.LAST)}>Apellido</th>
+                    <th onClick={()=>changeSort(SortBy.COUNTRY)}>País</th>
                     <th>Acciones</th>
                 </tr>
             </thead>
@@ -31,9 +30,9 @@ export function UsersList ({users,colorRows,handleDeleteUser}:Props) {
                     return (
                         <tr key={user.login.uuid} style={{background: (colorRows)?color:'transparent'}}>
                             <td> <img src={user.picture.thumbnail}/></td>
-                            <td>{user.name.first}</td>
-                            <td>{user.name.last}</td>
-                            <td>{user.location.country}</td>
+                            <td >{user.name.first}</td>
+                            <td >{user.name.last}</td>
+                            <td >{user.location.country}</td>
                             <td>
                                 <button onClick={()=>handleDeleteUser(
                                     user.login.uuid
