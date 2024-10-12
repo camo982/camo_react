@@ -28,7 +28,9 @@ function App() {
         return res.json();
       }).then((res)=>{
         setUsers(prevUser=>prevUser.concat(res.results))
-        initialUsers.current=res.results
+        if (initialUsers.current.length !> 0 ){
+          initialUsers.current=res.results
+        }
         
       })
       .catch(err =>{
