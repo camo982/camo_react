@@ -1,0 +1,81 @@
+/**
+ * Copyright (c) 2024 - Liverpool. All rights reserved
+ * Grupo de Asesores Profesionales en Servicios de Integración {GAPSI} - CDMX - 2023
+ *
+ * @author: Camilo Gomez [10/11/2024]
+ * @updated: ---
+ * @description: ---
+ * @version 1.0.0
+**/
+
+.profileTooltipContent {
+    width: 240px;
+    text-align: center;
+    padding: 18px;
+  
+    .email {
+      color: #333;
+      font-size: 14px;
+      margin-bottom: 16px;
+      font-weight: 600;
+    }
+  
+    .avatar {
+      width: 80px;
+      height: 80px;
+      margin: 0 auto;
+      background-color: #EBEBEB;
+      font-size: 36px;
+      margin-bottom: 8px;
+      color: #333
+    }
+  
+    .greeting {
+      color: #333;
+      font-size: 16px;
+      font-weight: 600;
+    }
+  
+    .info {
+      display: flex;
+      justify-content: space-around;
+      margin-bottom: 16px;
+      margin-top: 16px;
+      color: #333;
+      .infoItem {
+        text-align: center;
+  
+        .number {
+          font-size: 12px;
+          font-weight: 600;
+        }
+  
+        .label {
+          font-size: 12px;
+          font-weight: 600;
+        }
+      }
+    }
+  
+    .logoutButton {
+      width: 100%;
+      border-color: #9c27b0;
+      color: #9c27b0;
+    }
+  
+    .terms {
+      font-family: Roboto;
+      font-size: 8px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 12px; 
+      text-decoration-line: underline;
+      text-decoration-style: solid;
+      text-decoration-skip-ink: none;
+      text-decoration-thickness: auto;
+      text-underline-offset: auto;
+      text-underline-position: from-font;
+      margin: 0px;
+      color: #333;
+    }
+  }

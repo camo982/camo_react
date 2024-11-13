@@ -1,0 +1,92 @@
+/**
+ * Copyright (c) 2024 - Liverpool. All rights reserved
+ * Grupo de Asesores Profesionales en Servicios de Integración (GAPSI) - CDMX - 2024
+ *
+ * @author: Diego Valencia [11/07/2024]
+ * @updated: ---
+ * @description: ---
+ * @version 1.0.0
+*/
+
+body {
+  font-family: helvetica;
+}
+
+.col-container {
+  display: flex;
+}
+
+.col {
+  border: none;
+  cursor: move;
+  border-radius: 0;
+  background: white;
+
+  .header-table {
+    height: 56px;
+    border-bottom: 1px solid #D8D8D8;
+    padding: 18px;
+
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 18.2px;
+    justify-content: flex-start;
+    display: flex;
+    gap: 4px;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .content-table {
+    height: 56px;
+    padding: 18px 18px 18px 18px;
+
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 18.2px;
+  }
+
+
+}
+
+.col .title {
+  text-align: center;
+  font-weight: bold;
+  padding: 10px;
+  border-top-left-radius: 9px;
+  border-top-right-radius: 9px;
+}
+
+/* dashed */
+.col.over {
+  border: 2px dashed #000;
+}
+
+
+.scrolltable {
+  overflow-y: auto;
+  //max-height: 100%; /* Usa 100% para que tome el máximo del padre */
+  position: relative;
+  max-height: calc(100vh - 588px);
+
+  &::-webkit-scrollbar {
+    width: 4px;
+    background: #fff;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    width: 4px;
+    border-radius: 4px;
+    background: #833177;
+  }
+}
+
+@media(max-width:920px) {
+  .scrolltable {
+    overflow-y: auto;
+    position: relative;
+    max-height: calc(100vh - 480px);
+  }
+}

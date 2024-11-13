@@ -1,0 +1,93 @@
+/**
+ * Copyright (c) 2024 - Liverpool. All rights reserved
+ *
+ * Grupo de Asesores Profesionales en Servicios de Integración {GAPSI} - CDMX - 2024
+ * 
+ * @author: Julio Fuentes [18/09/2024]
+ * @updated: ---
+ * @description: .
+ * @version 1.0.0
+**/
+
+
+.container {
+    padding: 0 32px 32px;
+    padding-bottom: 54px;
+    flex: 3;
+}
+
+.title {
+    font-family: 'robotoregular';
+    color: #e10098;
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 33px;
+    letter-spacing: 0px;
+    text-align: center;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.subTitle {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 21px;
+    letter-spacing: 0px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.text {
+    font-family: 'robotoregular';
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19px;
+    letter-spacing: 0px;
+    text-align: left;
+    margin-bottom: 20px;
+    color: #666666;
+    text-align: center;
+}
+
+.help {
+    @extend .text;
+    color: rgba(102, 102, 102, 1);
+    text-align: center;
+}
+
+.number {
+    font-family: 'robotoregular';
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 21px;
+    letter-spacing: 0px;
+    text-align: left;
+    color: #e10098;
+    text-decoration: underline;
+    text-align: center;
+}
+
+.divider {
+    margin-bottom: 20px;
+}
+
+.divImage {
+    text-align: -webkit-center;
+    margin-bottom: 29px;
+}
+
+.img {
+    max-width: 272px;
+    max-height: 221px;
+}
+
+.btnContainer {
+    display: flex;
+    margin-top: 48px;
+    margin-bottom: 44px;
+}
+
+.btnReturn {
+    color: white;
+    background: #ADA8A8 !important;
+}

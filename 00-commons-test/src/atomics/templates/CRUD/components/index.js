@@ -1,0 +1,1 @@
+export { default as HeadComponent } from './HeadComponent.jsx';

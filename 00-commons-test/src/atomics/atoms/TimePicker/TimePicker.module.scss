@@ -1,0 +1,25 @@
+/**
+ * Copyright (c) 2024 - Liverpool. All rights reserved
+ * Grupo de Asesores Profesionales en Servicios de Integración (GAPSI) - CDMX - 2024
+ *
+ * @author: Julio Fuentes [17/09/2024]
+ * @updated: ---
+ * @description: ---
+ * @version 1.0.0
+*/
+
+.timePickerModule {
+    position: relative;
+
+    div {
+        font-size: 1rem;
+        outline: none;
+        border: 1px solid #d8d8d8;
+        border-radius: 5px;
+        padding-top: 5px;
+        padding-bottom: 2px;
+        color: gray;
+        transition: 0.1s ease-out;
+        width: 100%;
+    }
+}

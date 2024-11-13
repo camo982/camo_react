@@ -1,0 +1,82 @@
+/**
+ * Copyright (c) 2024 - Liverpool. All rights reserved
+ * Grupo de Asesores Profesionales en Servicios de Integración (GAPSI) - CDMX - 2024
+ *
+ * @author: Julio Fuentes [15/10/2024]
+ * @updated: ---
+ * @description: ---
+ * @version 1.0.0
+*/
+
+.crud {
+  padding: 46px 72px;
+  display: flex;
+  gap: 16px;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  //height: 880px;
+
+  .containerHead {
+    border-radius: 4px;
+    background: var(--Surface-white, #FFF);
+    box-shadow: 0px 0px 15px 0px rgba(21, 21, 21, 0.12);
+    display: flex;
+    padding: 24px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    align-self: stretch;
+    //width: 100%;
+
+    .searchContainer {
+      display: flex;
+      align-items: center;
+      //gap: 24px;
+      flex: 1 0 0;
+      width: 100%;
+
+      .title {
+        color: var(--Surface-500---Key, var(--color-surface-carbon-500-KEY, #333));
+        font-feature-settings: 'liga' off, 'clig' off;
+        font-family: Roboto;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        padding-bottom: 5px;
+        padding-right: 24px;
+        display: flex;
+        align-items: center;
+        flex: 1 0;
+        width: 100%;
+
+        p {
+          margin: 0;
+        }
+      }
+
+      .searchBar {
+        width: 100%;
+      }
+
+      .button {
+        padding-bottom: 20px;
+        padding-left: 16px;
+      }
+    }
+
+  }
+
+  .containerGrid {
+    display: grid;
+    align-items: flex-start;
+    width: 100%;
+    overflow: auto;
+    max-height: 100%;
+  }
+}
+
+.displayNone {
+  display: none !important;
+}

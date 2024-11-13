@@ -1,0 +1,41 @@
+/**
+ * Copyright (c) 2024 - Liverpool. All rights reserved
+ * Grupo de Asesores Profesionales en Servicios de Integración (GAPSI) - CDMX - 2024
+ *
+ * @author: Angel Vazquez [15/08/2023]
+ * @updated: Diego Valencia [11/07/2024]
+ * @description: ---
+ * @version 1.0.0
+*/
+
+/*
+ * Branding colors and fonts
+ */
+
+$p-0: 0.5rem;
+$p-1: 1rem;
+$p-2: 1.5rem;
+$p-3: 2rem;
+$p-4: 2.5rem;
+$p-5: 3rem;
+$p-6: 3.5rem;
+
+@mixin border-radius($size...) {
+  -webkit-border-radius: $size;
+  -moz-border-radius: $size;
+  -o-border-radius: $size;
+  border-radius: $size;
+  -ms-border-radius: $size;
+}
+
+.shadow {
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.16);
+}
+
+.cardBox {
+  @include border-radius(0.25rem);
+  margin-bottom: $p-1;
+  background-color: #ffffff;
+  padding: $p-3 $p-1;
+  @extend .shadow;
+}

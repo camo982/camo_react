@@ -1,0 +1,90 @@
+/**
+ * Copyright (c) 2024 - Liverpool. All rights reserved
+ * Grupo de Asesores Profesionales en Servicios de Integración (GAPSI) - CDMX - 2024
+ *
+ * @author: Julio Fuentes [17/09/2024]
+ * @updated: ---
+ * @description: ---
+ * @version 1.0.0
+*/
+
+.notification {
+    display: flex;
+    width: 280px;
+    align-items: center;
+    gap: 8px;
+    border-bottom: 1px solid var(--surface-50, #ebebeb);
+    background: var(--surface-white, #fff);
+    height: fit-content;
+    min-height: 90px;
+    align-items: flex-start;
+
+    .leftBar {
+        width: 6px;
+        height: 90px;
+        background: #833177;
+    }
+
+    .body {
+        display: flex;
+        padding: 16px 0px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+
+        .title {
+            display: flex;
+            width: 248px;
+            height: 18px;
+            align-items: center;
+            justify-content: space-between;
+
+            .details {
+                display: flex;
+                align-items: flex-start;
+                gap: 4px;
+                flex: 1 0 0;
+
+                .icon {
+                    width: 18px;
+                    height: 18px;
+                    color: #833177;
+                }
+
+                .text {
+                    color: #333;
+                    font-family: Roboto, sans-serif;
+                    font-size: 14px;
+                    font-style: normal;
+                    font-weight: 600;
+                    line-height: 18.2px;
+                }
+            }
+
+            .info {
+                color: #333;
+                width: 18px;
+                height: 18px;
+                flex-shrink: 0;
+            }
+        }
+
+        .detail {
+            color: #333;
+            font-family: Roboto, sans-serif;
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 15.6px;
+
+            .count {
+                color: #333;
+                font-family: Roboto, sans-serif;
+                font-size: 12px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 15.6px;
+            }
+        }
+    }
+}

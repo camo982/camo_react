@@ -1,0 +1,91 @@
+/**
+ * Copyright (c) 2024 - Liverpool. All rights reserved
+ * Grupo de Asesores Profesionales en Servicios de Integración (GAPSI) - CDMX - 2024
+ *
+ * @author: Diego Valencia [11/07/2024]
+ * @updated: ---
+ * @description: ---
+ * @version 1.0.0
+*/
+
+/*
+ * Branding colors and fonts
+ */
+:root {
+  --color-primary: #e10098;
+  --color-primary-light: #ff87d8;
+  --color-white: #ffffff;
+  --color-black: #000000;
+  /** Fonts */
+  --font-size-xxs: 0.5rem;
+  --font-size-2xxs: 0.62rem;
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.875rem;
+}
+
+.baseButton {
+  color: var(--color-black);
+  font-size: var(--font-size-sm);
+  display: flex;
+  text-align: center;
+  border-radius: 5px;
+  background-color: transparent;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+}
+
+.fontPinkBrand {
+  color: #833177 !important;
+}
+
+.disabled {
+  background-color: var(--color-primary-light) !important;
+  box-shadow: none !important;
+}
+
+.main {
+  @extend .baseButton;
+  color: var(--color-white) !important;
+  background-color: #833177 !important;
+}
+
+.secondary {
+  @extend .baseButton;
+  color: var(--color-black) !important;
+  background-color: white !important;
+  border-bottom: 1px inset;
+}
+
+.triggerAction {
+  @extend .baseButton;
+  color: #833177;
+  border: 1px solid #833177;
+  background: white;
+}
+
+.link {
+  @extend .baseButton;
+  color: #833177;
+  text-decoration: underline;
+  border: none !important;
+  background: white;
+  box-shadow: none !important;
+}
+
+.full {
+  width: 100%;
+}
+
+.medium {
+  width: 300px;
+}
+
+.default {
+  padding-left: 7%;
+  padding-right: 7%;
+}
+
+.disabled {
+  opacity: 0.5;
+}
